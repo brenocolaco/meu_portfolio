@@ -1,0 +1,66 @@
+[
+    {
+        "id": "projeto1",
+        "titulo": "Projeto Elétrico" ,
+        "descricao": "Projeto Elétrico Residencial Simples" ,
+        "imagem": "/static/images/planta-baixa.png", 
+        "_html": "<embed src=\"/projetos/Projeto%20Eletrico%20Residencial/desenhos/trabalho%20eletrico.pdf\" type=\"application/pdf\"></embed>",
+        "anexos": [
+            {
+                "nome": "Trabalho Eletrico" , 
+                "url": "/projetos/Projeto Eletrico Residencial/desenhos/trabalho%20eletrico.pdf"
+            }
+        ]
+    },
+    {
+        "id": "projeto2",
+        "titulo": "Análise do Spotify" , 
+        "descricao": "Análise do Spotify para Previsão de Popularidade Musical." ,
+        "imagem": "/static/images/spotify-analise.png",         
+        "anexos": [
+            {
+                "nome": "Análise de músicas do Spotify" , 
+                "url": "/projetos/Analise do Spotify/Análise do Spotify.ipynb"
+            }
+        ]
+    },
+    {
+        "id": "projeto3",
+        "titulo": "Scripts do Autocad" , 
+        "descricao": "Otimização de Projetos CAD com Scripts PyAutoCAD." ,
+        "imagem": "/static/images/script-autocad.png",         
+        "anexos": [
+            
+        ]
+    },
+    {
+        "id": "projeto4",
+        "titulo": "Blocos e Desenhos do CAD" , 
+        "descricao": "Organização e Aplicação de Blocos e Desenhos em AutoCAD." ,
+        "imagem": "/static/images/blocos-cad.png",         
+        "anexos": [
+            
+        ]
+    },
+    {
+        "id": "projeto5",
+        "titulo": "Análise do Enem" , 
+        "descricao": "Análise Comparativa das Notas do ENEM (2019-2021)." ,
+        "imagem": "/static/images/analise-enem.png",         
+        "anexos": [
+            
+            
+        ]
+    },
+    {
+        "id": "projeto6",
+        "titulo": "Sistema de Cadastro" , 
+        "descricao": "Desenvolvimento de Sistema de Cadastro Simplificado em Python." ,
+        "imagem": "/static/images/cadastro-simples.png",         
+        "anexos": [
+            
+            
+        ]
+    }
+]
+

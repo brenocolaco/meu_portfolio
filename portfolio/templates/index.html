@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portifolio</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/circuit-style.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portifolio</a>
+
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#knowledges">Conhecimentos</a>
+            <a href="#portifolio">Portifolio</a>
+            <a href="#contact">Contato</a>
+            <a href="#about">Sobre</a>
+        </div>
+
+        <div class="nav-responsive">
+            <a href="#home">Home</a>
+            <a href="#knowledges">Conhecimentos</a>
+            <a href="#portifolio">Portifolio</a>
+            <a href="#contact">Contato</a>
+            <a href="#about">Sobre</a>
+        </div>
+
+        <div class="menu-hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Olá, Eu sou</h3>
+            <h1>Breno Colaço</h1>
+            <h3>Engenheiro Eletricista e Entusiasta em Programação</h3>
+            <p> Explore um pouco dos meus projetos!</p>
+            
+            <div class="social-media">
+                <a href="https://www.instagram.com/breno_colaco/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/breno-cola%C3%A7o-425559202/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            </div>
+
+            <div>
+                <a href="/projetos/Projeto%20Eletrico%20Residencial/desenhos/trabalho%20eletrico.pdf" class="btn" download>Download CV</a>
+            </div>            
+        </div>
+
+        <div class="home-img">
+            <img class="img-circular" src="{{ url_for('static', filename='images/minha-foto.png') }}" alt="Foto de Perfil">
+        </div>
+
+        
+    </section>
+
+    <section class="services" id="knowledges">
+        <h2>Meus Conhecimentos</h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <a href=""><i class='bx bx-pulse'></i></a>
+                <h3>Formação Em Engenharia Elétrica</h3>
+                <p>Ênfase em Elétroténica</p>
+                <ul style="list-style: none;">
+                    <li><i class='bx bx-check small'></i>AutoCAD</li>
+                    <li><i class='bx bx-check small'></i>Comandos Elétricos</li>
+                    <li><i class='bx bx-check small'></i>CLP's</li>
+                    <li><i class='bx bx-check small'></i>Soft Starter's</li>
+                </ul>
+                <!--<a href="#" class="btn">Read More</a>-->
+            </div>
+
+            <div class="services-box">
+                <a href=""><i class='bx bx-code-alt'></i></a>
+                <h3>Programação voltado ao Back-End em linguagem Python</h3>
+                <ul style="list-style: none;">
+                    <li><i class='bx bx-check small'></i>Procedural e OOP</li>
+                    <li><i class='bx bx-check small'></i>Construção de API</li>
+                    <li><i class='bx bx-check small'></i>Django</li>
+                    <li><i class='bx bx-check small'></i>Fast API</li>
+                    <li><i class='bx bx-check small'></i>Scripts</li>
+                </ul>
+                <!--<a href="#" class="btn">Read More</a>-->
+            </div>
+
+            <div class="services-box">
+                <a href=""><i class='bx bx-line-chart'></i></a>
+                <h3>Análise de Dados:</h3>
+                <ul style="list-style: none;">
+                    <li><i class='bx bx-check small'></i>Power BI</li>
+                    <li><i class='bx bx-check small'></i>Estatística</li>
+                    <li><i class='bx bx-check small'></i>Pandas</li>
+                    <li><i class='bx bx-check small'></i>Numpys</li>
+                </ul>
+                <!--<a href="#" class="btn">Read More</a>-->
+            </div>
+        </div>
+    </section>
+   
+    <section class="portifolio" id="portifolio">
+        <h2>Projetos</h2>
+
+        <div class="portifolio-container">
+            
+        </div>
+    </section>
+
+    <div class="modal" id="modal-projetos">
+        <div class="conteudo-projeto" id="conteudo-projeto">
+
+        </div>
+    </div>
+
+    <section class="contact" id="contact">
+        
+        <h2>Contate-me</h2>
+        <form action="/send" method="POST">
+            <div class="input-box">
+                <input type="text" name="nome" placeholder="Nome Completo" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+            </div>
+
+            <div class="input-box">
+                <input type="number" name="numero" placeholder="Número de Contato" required>
+                <input type="text" name="mensagem" placeholder="Assunto" required>
+            </div>
+
+            <textarea cols="30" rows="10" placeholder="Mensagem"></textarea>
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <section class="about" id="about">
+        <div id="circuit"></div>
+        <div class="about-img">
+            <img class="img-circular" src="{{ url_for('static', filename='images/minha-foto.png') }}" alt="Sobre mim">
+        </div>
+        <div class="about-content">
+            <h3>Sobre mim</h3>
+
+            <p>Sou Breno Colaço, Engenheiro Eletricista com paixão por tecnologia e dados. Nos últimos dois anos, 
+                tenho me dedicado ao estudo de desenvolvimento back-end e à análise de dados utilizando Python.
+            </p>
+
+            <a href="#about" class="btn" id="btn-sobre-mim">Leia Mais</a>
+        </div>
+        <div class="modal" id="modal-sobre-mim">
+            <div class="leia-mais">
+                <a class="x" id="about-modal-close"><i class=''>❌</i></a>
+                <h2>Breno Colaço - Engenheiro Eletricista e Entusiasta em Programação e Ciência de Dados</h2>
+                <h3>Transformando dados em energia para o futuro.</h3>
+                <p>Sou Breno Colaço, um engenheiro elétrico apaixonado por tecnologia e dados. Minha jornada na engenharia elétrica me proporcionou uma base sólida em sistemas elétricos e 
+                    uma compreensão profunda dos desafios do setor energético. Ao longo da minha formação, desenvolvi um forte interesse pela ciência de dados e pela inteligência artificial, 
+                    áreas que acredito terem o potencial de revolucionar a forma como geramos e consumimos energia.</p>
+                <h3>Habilidades e Experiências:</h3>
+                <ul>
+                    <li><i class='bx bx-check small'></i>Engenharia Elétrica: Sólida formação em sistemas elétricos, com foco em geração, transmissão e distribuição de energia.</li>
+                    <li><i class='bx bx-check small'></i>Ciência de Dados: Conhecimento em coleta, limpeza, análise e modelagem de dados, com ênfase em técnicas de aprendizado de máquina e inteligência artificial.</li>
+                    <li><i class='bx bx-check small'></i>Desenvolvimento de Software: Habilidade em linguagens de programação Python voltado ao back-end e ferramentas para desenvolvimento de soluções de dados escaláveis e robustas (Flask, FastAPI).</li>
+                    <li><i class='bx bx-check small'></i>TCC: Realizei um estudo aprofundado sobre a aplicação da inteligência artificial na previsão de demanda de energia elétrica, demonstrando minha capacidade de pesquisa e análise.</li>
+                </ul>
+                    
+                <h3>O que me motiva:</h3>    
+                <p>Acredito que a combinação de engenharia elétrica e ciência de dados é a chave para construir um futuro energético mais sustentável e eficiente.</p>
+                <p>Minha paixão por resolver problemas complexos e criar soluções inovadoras me impulsiona a buscar desafios cada vez maiores.</p>        
+                <h3>Procurando por:</h3>
+                <p>Oportunidades para trabalhar em projetos desafiadores e fazer a diferença no setor energético. Busco uma equipe multidisciplinar e colaborativa, 
+                    onde possa compartilhar meus conhecimentos e aprender com outros profissionais.</p>
+                <p>Vamos construir o futuro da energia juntos!</p>    
+                    
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2024 </p>
+    </footer>
+</body>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</html>
